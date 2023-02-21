@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/hamburger.css">
-    <script src="https://kit.fontawesome.com/f413f67499.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/f413f67499.js" crossorigin="anonymous"></script> -->
 </head>
 
 <body>
@@ -21,11 +21,11 @@
     <!-- NAV  -->
 
     <nav class="navbar">
-        <div class="container">
-            <div class="navbar-nav">
-                <div class="navbar-logo">
-                    <a href="#" class="home">
-                        <h1>Jill Valentine</h1>
+        <div class="navbar__container">
+            <div class="navbar__nav">
+                <div class="navbar__logo">
+                    <a href="#" class="navbar__home">
+                        <h1 class="navbar__h1">Jill Valentine</h1>
                     </a>
                 </div>
                 <button class="hamburger hamburger--spin" type="button">
@@ -33,17 +33,17 @@
                         <span class="hamburger-inner"></span>
                     </span>
                 </button>
-                <div class="navbar-list mobile">
-                    <a href="#mywork" class="navbar-item">my works</a>
-                    <a href="#aboutme" class="navbar-item">about me</a>
-                    <a href="#skills" class="navbar-item">skills</a>
-                    <a href="#contact" class="navbar-item">contact</a>
+                <div class="navbar__list navbar--mobile">
+                    <a href="#mywork" class="navbar__item">my works</a>
+                    <a href="#aboutme" class="navbar__item">about me</a>
+                    <a href="#skills" class="navbar__item">skills</a>
+                    <a href="#contact" class="navbar__item">contact</a>
                 </div>
-                <div class="navbar-list desktop">
-                    <a href="#myworks" class="navbar-item underline">my works</a>
-                    <a href="#aboutme" class="navbar-item underline">about me</a>
-                    <a href="#skills" class="navbar-item underline">skills</a>
-                    <a href="#contact" class="navbar-item underline">contact</a>
+                <div class="navbar__list navbar--desktop">
+                    <a href="#myworks" class="navbar__item underline">my works</a>
+                    <a href="#aboutme" class="navbar__item underline">about me</a>
+                    <a href="#skills" class="navbar__item underline">skills</a>
+                    <a href="#contact" class="navbar__item underline">contact</a>
                 </div>
             </div>
 
@@ -51,20 +51,19 @@
 
     </nav>
 
-    <header>
-        <div class="background">
-            <div class="blurred-gradient gradient1"></div>
-            <div class="blurred-gradient gradient2"></div>
-            <div class="blurred-gradient gradient3"></div>
-
+    <header class="header">
+        <div class="header__background">
+            <div class="header__blurredGradient header--gradient1"></div>
+            <div class="header__blurredGradient header--gradient2"></div>
+            <div class="header__blurredGradient header--gradient3"></div>
         </div>
-        <div class="header-text">
-            <h2 class="text-start">Hi, I'm Jill.<br>Senior graphic designer and junior UX/UI designer.</h2>
+        <div class="header__text">
+            <h2 class="header__textStart">Hi, I'm Jill.<br>Senior graphic designer and junior UX/UI designer.</h2>
             <p> My experience is mostly connected with creative design. Take a look at my portfolio.
             </p>
         </div>
 
-        <div class="header-arrow">
+        <div class="header__arrow">
     </header>
 
     <div id="myworks" class="myworks"></div>

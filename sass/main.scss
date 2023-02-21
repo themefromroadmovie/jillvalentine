@@ -25,149 +25,143 @@ body {
 	top: 0;
 	width: 100%;
 
-	// border-bottom: 1px solid $light-black;
 	z-index: 10;
 
-	.container {
+	&__container {
 		position: relative;
 		margin: 0 auto;
 		width: 100%;
 		max-width: 1400px;
+	}
 
-		.navbar-nav {
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-			padding: 25px 16px;
-			height: 60px;
+	&__nav {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 25px 16px;
+		height: 60px;
+	}
 
-			.navbar-logo {
-				.home {
-					h1 {
-						color: $text-color;
-						font-weight: 600;
-						font-size: 2rem;
-					}
-				}
-			}
+	&__h1 {
+		color: $text-color;
+		font-weight: 600;
+		font-size: 2rem;
+	}
 
-			.desktop {
-				display: none;
-			}
+	&--desktop {
+		display: none;
+	}
 
-			.mobile {
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 230px;
-				display: flex;
-				flex-direction: column;
-				justify-content: flex-end;
-				padding-bottom: 1em;
-				align-items: center;
-				background-color: $white;
-				z-index: -5;
-				transform: translateY(-100%);
-				transition: transform 0.5s;
+	&--mobile {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 230px;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		padding-bottom: 1em;
+		align-items: center;
+		background-color: $white-opacity;
+		border-bottom: 1px solid $light-black;
+		z-index: -5;
+		transform: translateY(-100%);
+		transition: transform 300ms;
+	}
+	&--active {
+		transform: translateY(0);
+	}
 
-				&--active {
-					transform: translateY(0);
-				}
+	&__item {
+		position: relative;
+		color: $text-color;
+		font-weight: bold;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-size: 1.8rem;
+		padding: 0.5em;
+	}
 
-				.navbar-item {
-					position: relative;
-					color: $text-color;
-					font-weight: bold;
-					text-decoration: none;
-					text-transform: uppercase;
-					font-size: 1.8rem;
-					padding: 0.5em;
-				}
-
-				.navbar-item:focus {
-					color: $cta-color;
-				}
-			}
-		}
+	&__item:focus {
+		color: $cta-color;
+	}
+	&--background {
+		background-color: $white-opacity;
+		border-bottom: 1px solid $light-black;
 	}
 }
 
-.nav-background {
-	background-color: $white-opacity;
-}
-
-header {
+.header {
 	position: relative;
 	width: 100%;
 	height: 100vh;
 	padding: 28px;
 	overflow: hidden;
 
-	.background {
-		.blurred-gradient {
-			width: 205px;
-			height: 205px;
-			border-radius: 50%;
-			filter: blur(34px);
-			opacity: 0.7;
-			z-index: -10;
-		}
-
-		.gradient1 {
-			position: absolute;
-			top: 49%;
-			left: 54%;
-			transform: translate(-50%, -50%);
-			background-color: $gradient-lightblue;
-			z-index: -40;
-			animation: pulse1 33s infinite linear;
-		}
-		.gradient2 {
-			position: absolute;
-			top: 24%;
-			left: 55%;
-			transform: translate(-50%, -50%);
-			background-color: $gradient-blue;
-			z-index: -30;
-			animation: pulse1 30s infinite linear;
-		}
-		.gradient3 {
-			position: absolute;
-			top: 33%;
-			left: 87%;
-			transform: translate(-50%, -50%);
-			background-color: $gradient-pink;
-			z-index: -20;
-			animation: pulse1 27s infinite linear;
-		}
+	&__blurredGradient {
+		width: 205px;
+		height: 205px;
+		border-radius: 50%;
+		filter: blur(34px);
+		opacity: 0.7;
+		z-index: -10;
 	}
-	.header-text {
+
+	&--gradient1 {
+		position: absolute;
+		top: 49%;
+		left: 54%;
+		transform: translate(-50%, -50%);
+		background-color: $gradient-lightblue;
+		z-index: -40;
+		animation: pulse1 33s infinite linear;
+	}
+	&--gradient2 {
+		position: absolute;
+		top: 24%;
+		left: 55%;
+		transform: translate(-50%, -50%);
+		background-color: $gradient-blue;
+		z-index: -30;
+		animation: pulse2 30s infinite linear;
+	}
+	&--gradient3 {
+		position: absolute;
+		top: 33%;
+		left: 87%;
+		transform: translate(-50%, -50%);
+		background-color: $gradient-pink;
+		z-index: -20;
+		animation: pulse3 27s infinite linear;
+	}
+
+	&__text {
 		height: 100vh;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 		padding-top: 10em;
-		h2 {
-			font-weight: 600;
-			font-size: 2.6rem;
-			margin-bottom: 33px;
-		}
-		p {
-			font-weight: normal;
-			font-size: 2rem;
-		}
+	}
+	&__textStart {
+		font-weight: 600;
+		font-size: 2.6rem;
+		margin-bottom: 33px;
+	}
+	&__p {
+		font-weight: normal;
+		font-size: 2rem;
 	}
 
-	.header-arrow {
+	&__arrow {
 		position: absolute;
 		top: 90%;
 		left: 50%;
-		i {
-			font-size: 30px;
-			color: black;
-		}
+	}
+	i {
+		font-size: 30px;
+		color: black;
 	}
 }
 
@@ -186,51 +180,32 @@ header {
 
 @media (min-width: 996px) {
 	.navbar {
-		.container {
-			.navbar-nav {
-				.hamburger {
-					display: none;
-				}
-				.desktop {
-					display: block;
-					text-decoration: none;
-					text-transform: uppercase;
-					font-weight: 600;
-					font-size: 1.6rem;
-					.navbar-item {
-						position: relative;
-						padding-bottom: 2px;
-						margin: 0 2em;
-						transition: 0.3s;
-					}
+		.hamburger {
+			display: none;
+		}
 
-					.navbar-item,
-					.navbar-item::after,
-					.navbar-item::before {
-						transition: transform 0.3s;
-					}
+		&--desktop {
+			display: block;
+			text-decoration: none;
+			text-transform: uppercase;
+			font-weight: 600;
+			font-size: 1.6rem;
+		}
+		&__item {
+			position: relative;
+			padding-bottom: 2px;
+			margin: 0 2em;
+			transition: 0.3s;
+		}
 
-					.navbar-item:focus {
-						color: $cta-color;
-					}
+		&__item,
+		&__item::after,
+		&__item::before {
+			transition: transform 0.3s;
+		}
 
-					.underline::after {
-						content: '';
-						position: absolute;
-						bottom: 0;
-						left: 0;
-						height: 1.5px;
-						width: 100%;
-						background-color: $text-color;
-						transform: scaleX(0);
-						transform-origin: right;
-					}
-					.underline:hover::after {
-						transform: scaleX(1);
-						transform-origin: left;
-					}
-				}
-			}
+		&__item:hover {
+			color: $cta-color;
 		}
 	}
 }

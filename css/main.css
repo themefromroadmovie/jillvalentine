@@ -1,6 +1,19 @@
 @keyframes pulse1 {
   50% {
-    transform: scale(2);
+    top: 24%;
+    left: 55%;
+  }
+}
+@keyframes pulse2 {
+  50% {
+    top: 70%;
+    left: 75%;
+  }
+}
+@keyframes pulse2 {
+  50% {
+    top: 29%;
+    left: 24%;
   }
 }
 * {
@@ -27,28 +40,28 @@ body {
   width: 100%;
   z-index: 10;
 }
-.navbar .container {
+.navbar__container {
   position: relative;
   margin: 0 auto;
   width: 100%;
   max-width: 1400px;
 }
-.navbar .container .navbar-nav {
+.navbar__nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 25px 16px;
   height: 60px;
 }
-.navbar .container .navbar-nav .navbar-logo .home h1 {
+.navbar__h1 {
   color: #252525;
   font-weight: 600;
   font-size: 2rem;
 }
-.navbar .container .navbar-nav .desktop {
+.navbar--desktop {
   display: none;
 }
-.navbar .container .navbar-nav .mobile {
+.navbar--mobile {
   position: absolute;
   top: 0;
   left: 0;
@@ -59,15 +72,16 @@ body {
   justify-content: flex-end;
   padding-bottom: 1em;
   align-items: center;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   z-index: -5;
   transform: translateY(-100%);
-  transition: transform 0.5s;
+  transition: transform 300ms;
 }
-.navbar .container .navbar-nav .mobile--active {
+.navbar--active {
   transform: translateY(0);
 }
-.navbar .container .navbar-nav .mobile .navbar-item {
+.navbar__item {
   position: relative;
   color: #252525;
   font-weight: bold;
@@ -76,22 +90,22 @@ body {
   font-size: 1.8rem;
   padding: 0.5em;
 }
-.navbar .container .navbar-nav .mobile .navbar-item:focus {
+.navbar__item:focus {
   color: #00b1d8;
 }
-
-.nav-background {
-  background-color: rgba(255, 255, 255, 0.6901960784);
+.navbar--background {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-header {
+.header {
   position: relative;
   width: 100%;
   height: 100vh;
   padding: 28px;
   overflow: hidden;
 }
-header .background .blurred-gradient {
+.header__blurredGradient {
   width: 205px;
   height: 205px;
   border-radius: 50%;
@@ -99,7 +113,7 @@ header .background .blurred-gradient {
   opacity: 0.7;
   z-index: -10;
 }
-header .background .gradient1 {
+.header--gradient1 {
   position: absolute;
   top: 49%;
   left: 54%;
@@ -108,25 +122,25 @@ header .background .gradient1 {
   z-index: -40;
   animation: pulse1 33s infinite linear;
 }
-header .background .gradient2 {
+.header--gradient2 {
   position: absolute;
   top: 24%;
   left: 55%;
   transform: translate(-50%, -50%);
   background-color: #a1d2ff;
   z-index: -30;
-  animation: pulse1 30s infinite linear;
+  animation: pulse2 30s infinite linear;
 }
-header .background .gradient3 {
+.header--gradient3 {
   position: absolute;
   top: 33%;
   left: 87%;
   transform: translate(-50%, -50%);
   background-color: #fecbff;
   z-index: -20;
-  animation: pulse1 27s infinite linear;
+  animation: pulse3 27s infinite linear;
 }
-header .header-text {
+.header__text {
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -134,21 +148,21 @@ header .header-text {
   align-items: center;
   padding-top: 10em;
 }
-header .header-text h2 {
+.header__textStart {
   font-weight: 600;
   font-size: 2.6rem;
   margin-bottom: 33px;
 }
-header .header-text p {
+.header__p {
   font-weight: normal;
   font-size: 2rem;
 }
-header .header-arrow {
+.header__arrow {
   position: absolute;
   top: 90%;
   left: 50%;
 }
-header .header-arrow i {
+.header i {
   font-size: 30px;
   color: black;
 }
@@ -169,43 +183,26 @@ header .header-arrow i {
 }
 
 @media (min-width: 996px) {
-  .navbar .container .navbar-nav .hamburger {
+  .navbar .hamburger {
     display: none;
   }
-  .navbar .container .navbar-nav .desktop {
+  .navbar--desktop {
     display: block;
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 600;
     font-size: 1.6rem;
   }
-  .navbar .container .navbar-nav .desktop .navbar-item {
+  .navbar__item {
     position: relative;
     padding-bottom: 2px;
     margin: 0 2em;
     transition: 0.3s;
   }
-  .navbar .container .navbar-nav .desktop .navbar-item,
-  .navbar .container .navbar-nav .desktop .navbar-item::after,
-  .navbar .container .navbar-nav .desktop .navbar-item::before {
+  .navbar__item, .navbar__item::after, .navbar__item::before {
     transition: transform 0.3s;
   }
-  .navbar .container .navbar-nav .desktop .navbar-item:focus {
+  .navbar__item:hover {
     color: #00b1d8;
-  }
-  .navbar .container .navbar-nav .desktop .underline::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 1.5px;
-    width: 100%;
-    background-color: #252525;
-    transform: scaleX(0);
-    transform-origin: right;
-  }
-  .navbar .container .navbar-nav .desktop .underline:hover::after {
-    transform: scaleX(1);
-    transform-origin: left;
   }
 }/*# sourceMappingURL=main.css.map */
