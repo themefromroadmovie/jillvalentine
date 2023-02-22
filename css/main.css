@@ -17,14 +17,8 @@
   }
 }
 @keyframes arrow {
-  25% {
-    bottom: 4%;
-  }
   50% {
-    bottom: 7%;
-  }
-  75% {
-    bottom: 4%;
+    bottom: 2%;
   }
 }
 * {
@@ -110,6 +104,7 @@ body {
 }
 .navbar--background {
   background-color: rgba(255, 255, 255, 0.95);
+  border-bottom: none;
 }
 
 .header {
@@ -175,7 +170,7 @@ body {
   bottom: 5%;
   left: 50%;
   transform: translateX(-50%);
-  animation: arrow 0.8s infinite;
+  animation: arrow 2.8s infinite ease;
 }
 
 .myworks {
@@ -188,11 +183,6 @@ body {
 .myworks__textStart {
   font-size: 1.6rem;
   text-transform: uppercase;
-}
-.myworks__boxes {
-  display: grid;
-  grid-template-columns: repeat(2, fr1);
-  grid-template-rows: repeat(2, fr1);
 }
 .myworks__box:nth-child(2n+1) {
   width: 100px;

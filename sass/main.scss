@@ -92,7 +92,7 @@ body {
 	}
 	&--background {
 		background-color: colors.$white-opacity;
-		// border-bottom: 1px solid $light-black;
+		border-bottom: none;
 	}
 }
 
@@ -164,7 +164,7 @@ body {
 		left: 50%;
 		transform: translateX(-50%);
 
-		animation: arrow 0.8s infinite;
+		animation: arrow 2.8s infinite ease;
 	}
 }
 
@@ -180,11 +180,11 @@ body {
 		text-transform: uppercase;
 	}
 
-	&__boxes {
-		display: grid;
-		grid-template-columns: repeat(2, fr1);
-		grid-template-rows: repeat(2, fr1);
-	}
+	// &__boxes {
+	// 	display: grid;
+	// 	grid-template-columns: repeat(2, fr1);
+	// 	grid-template-rows: repeat(2, fr1);
+	// }
 
 	&__box:nth-child(2n + 1) {
 		width: 100px;
