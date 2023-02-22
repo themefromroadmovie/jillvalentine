@@ -1,5 +1,5 @@
-@import './colors';
-@import './animations';
+@use './colors' as colors;
+@use './animations' as *;
 
 * {
 	box-sizing: border-box;
@@ -14,8 +14,13 @@ html {
 }
 
 body {
+	position: relative;
 	font-family: 'Montserrat', sans-serif;
-	background-color: $white;
+	background-color: colors.$white;
+}
+
+.section {
+	scroll-margin-top: 60px;
 }
 
 // NAV
@@ -24,7 +29,6 @@ body {
 	position: fixed;
 	top: 0;
 	width: 100%;
-
 	z-index: 10;
 
 	&__container {
@@ -38,12 +42,12 @@ body {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		padding: 25px 16px;
+		padding: 2.5em 1.6em;
 		height: 60px;
 	}
 
 	&__h1 {
-		color: $text-color;
+		color: colors.$text-color;
 		font-weight: 600;
 		font-size: 2rem;
 	}
@@ -63,8 +67,8 @@ body {
 		justify-content: flex-end;
 		padding-bottom: 1em;
 		align-items: center;
-		background-color: $white-opacity;
-		border-bottom: 1px solid $light-black;
+		background-color: colors.$white-opacity;
+		// border-bottom: 1px solid $light-black;
 		z-index: -5;
 		transform: translateY(-100%);
 		transition: transform 300ms;
@@ -75,7 +79,7 @@ body {
 
 	&__item {
 		position: relative;
-		color: $text-color;
+		color: colors.$text-color;
 		font-weight: bold;
 		text-decoration: none;
 		text-transform: uppercase;
@@ -84,11 +88,11 @@ body {
 	}
 
 	&__item:focus {
-		color: $cta-color;
+		color: colors.$cta-color;
 	}
 	&--background {
-		background-color: $white-opacity;
-		border-bottom: 1px solid $light-black;
+		background-color: colors.$white-opacity;
+		// border-bottom: 1px solid $light-black;
 	}
 }
 
@@ -96,8 +100,8 @@ body {
 	position: relative;
 	width: 100%;
 	height: 100vh;
-	padding: 28px;
-	overflow: hidden;
+	padding: 2.5em 2.8em 0 2.8em;
+	overflow-x: hidden;
 
 	&__blurredGradient {
 		width: 205px;
@@ -113,27 +117,27 @@ body {
 		top: 49%;
 		left: 54%;
 		transform: translate(-50%, -50%);
-		background-color: $gradient-lightblue;
+		background-color: colors.$gradient-lightblue;
 		z-index: -40;
-		animation: pulse1 33s infinite linear;
+		animation: pulse1 23s infinite linear;
 	}
 	&--gradient2 {
 		position: absolute;
 		top: 24%;
 		left: 55%;
 		transform: translate(-50%, -50%);
-		background-color: $gradient-blue;
+		background-color: colors.$gradient-blue;
 		z-index: -30;
-		animation: pulse2 30s infinite linear;
+		animation: pulse2 20s infinite linear;
 	}
 	&--gradient3 {
 		position: absolute;
 		top: 33%;
 		left: 87%;
 		transform: translate(-50%, -50%);
-		background-color: $gradient-pink;
+		background-color: colors.$gradient-pink;
 		z-index: -20;
-		animation: pulse3 27s infinite linear;
+		animation: pulse3 17s infinite linear;
 	}
 
 	&__text {
@@ -142,70 +146,67 @@ body {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		padding-top: 10em;
+		// padding-top: 2em;
 	}
 	&__textStart {
 		font-weight: 600;
-		font-size: 2.6rem;
-		margin-bottom: 33px;
+		font-size: 2.8rem;
+		margin-bottom: 1em;
 	}
 	&__p {
 		font-weight: normal;
-		font-size: 2rem;
+		font-size: 1.8rem;
 	}
 
-	&__arrow {
+	&__arrowIcon {
 		position: absolute;
-		top: 90%;
+		bottom: 5%;
 		left: 50%;
-	}
-	i {
-		font-size: 30px;
-		color: black;
+		transform: translateX(-50%);
+
+		animation: arrow 1.2s infinite linear;
 	}
 }
 
 .myworks {
 	width: 100%;
 	height: 100vh;
+
+	&__container {
+		padding: 2.5em 2.8em 0 2.8em;
+	}
+	&__textStart {
+		font-size: 1.6rem;
+		text-transform: uppercase;
+	}
+
+	&__boxes {
+		display: grid;
+		grid-template-columns: repeat(2, fr1);
+		grid-template-rows: repeat(2, fr1);
+	}
+
+	&__box:nth-child(2n + 1) {
+		width: 100px;
+		height: 100px;
+		background-color: lime;
+	}
+	&__box:nth-child(2n) {
+		width: 100px;
+		height: 100px;
+		background-color: blue;
+	}
 }
 .contact {
 	width: 100%;
 	height: 100vh;
+	background-color: green;
 }
 .linkedin {
 	width: 100%;
 	height: 100vh;
 }
 
-@media (min-width: 996px) {
-	.navbar {
-		.hamburger {
-			display: none;
-		}
-
-		&--desktop {
-			display: block;
-			text-decoration: none;
-			text-transform: uppercase;
-			font-weight: 600;
-			font-size: 1.6rem;
-		}
-		&__item {
-			position: relative;
-			padding-bottom: 2px;
-			margin: 0 2em;
-			transition: 0.3s;
-		}
-
-		&__item,
-		&__item::after,
-		&__item::before {
-			transition: transform 0.3s;
-		}
-
-		&__item:hover {
-			color: $cta-color;
-		}
-	}
-}
+@import './md';
+@import './lg';
+@import './xl';

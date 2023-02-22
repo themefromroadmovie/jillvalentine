@@ -12,7 +12,6 @@
 
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/hamburger.css">
-    <!-- <script src="https://kit.fontawesome.com/f413f67499.js" crossorigin="anonymous"></script> -->
 </head>
 
 <body>
@@ -59,23 +58,42 @@
         </div>
         <div class="header__text">
             <h2 class="header__textStart">Hi, I'm Jill.<br>Senior graphic designer and junior UX/UI designer.</h2>
-            <p> My experience is mostly connected with creative design. Take a look at my portfolio.
+            <p class="header__p"> My experience is mostly connected with creative design. Take a look at my portfolio.
             </p>
         </div>
 
-        <div class="header__arrow">
+        <a href="#myworks">
+            <div class="header__arrow">
+                <img class="header__arrowIcon" src="./img/arrow_down.svg" alt="ikona - strzałka w dół">
+            </div>
+        </a>
     </header>
 
-    <div id="myworks" class="myworks"></div>
-    <div id="aboutme" class="aboutme"></div>
-    <div id="skills" class="skills"></div>
-    <div id="contact" class="contact"></div>
+    <div id="myworks" class="myworks section myworks__container">
+        <div class="myworks__text">
+            <h3 class="myworks__textStart">my works</h3>
+
+            <div class="myworks__boxes">
+                <div class="myworks__box1 myworks__box"></div>
+                <div class="myworks__box2 myworks__box"></div>
+                <div class="myworks__box3 myworks__box"></div>
+                <div class="myworks__box4 myworks__box"></div>
+                <div class="myworks__box5 myworks__box"></div>
+                <div class="myworks__box6 myworks__box"></div>
+                <div class="myworks__box7 myworks__box"></div>
+                <div class="myworks__box8 myworks__box"></div>
+            </div>
+
+        </div>
+        <div id="aboutme" class="aboutme section"></div>
+        <div id="skills" class="skills section"></div>
+        <div id="contact" class="contact section"></div>
 
 
 
 
 
-    <script src="./js/script.js"></script>
+        <script src="./js/script.js"></script>
 </body>
 
 </html>

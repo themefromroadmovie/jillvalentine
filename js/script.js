@@ -3,10 +3,16 @@ const navMobile = document.querySelector('.navbar--mobile')
 const navBtn = document.querySelector('.hamburger')
 const allNavItems = document.querySelectorAll('.navbar__item')
 const footerYear = document.querySelector('.footer__year')
+const homeBtn = document.querySelector('.navbar__home')
 
 const handleNav = () => {
 	navBtn.classList.toggle('is-active')
 	navMobile.classList.toggle('navbar--active')
+}
+
+const handleHome = () => {
+	navBtn.classList.remove('is-active')
+	navMobile.classList.remove('navbar--active')
 }
 
 allNavItems.forEach(item => {
@@ -32,6 +38,8 @@ function addShadow() {
 navBtn.addEventListener('click', handleNav)
 window.addEventListener('scroll', addShadow)
 window.addEventListener('click', addShadow)
+homeBtn.addEventListener('click', handleHome)
+// homeBtn.addEventListener('click', homeBtn)
 
 // const handleCurrentYear = () => {
 // 	const year = new Date().getFullYear()

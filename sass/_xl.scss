@@ -1,0 +1,54 @@
+@media (min-width: 1200px) {
+	.navbar {
+		.hamburger {
+			display: none;
+		}
+
+		&--mobile {
+			display: none;
+		}
+
+		&--desktop {
+			display: block;
+			text-decoration: none;
+			text-transform: uppercase;
+			font-weight: 600;
+			font-size: 1.6rem;
+		}
+		&__item {
+			position: relative;
+			padding-bottom: 2px;
+			margin: 0 2em;
+			transition: 0.3s;
+		}
+
+		&__item,
+		&__item::after,
+		&__item::before {
+			transition: transform 0.3s;
+		}
+
+		&__item:hover {
+			color: colors.$cta-color;
+		}
+	}
+
+	.header {
+		padding: 3.5em 40em 0 40em;
+
+		&__blurredGradient {
+			scale: 2.8;
+			transform: translate(-50%, 0%);
+		}
+
+		&__textStart {
+			font-weight: 600;
+			font-size: 4.2rem;
+			margin-bottom: 1em;
+		}
+		&__p {
+			font-weight: normal;
+			font-size: 2.8rem;
+		}
+	}
+}

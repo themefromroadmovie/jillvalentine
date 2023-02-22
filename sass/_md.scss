@@ -1,0 +1,30 @@
+@media (min-width: 768px) {
+	.navbar {
+		padding: 2em 1.6em;
+
+		&__h1 {
+			color: colors.$text-color;
+			font-weight: 600;
+			font-size: 2.5rem;
+		}
+	}
+
+	.header {
+		padding: 3.5em 3.8em 0 3.8em;
+
+		&__blurredGradient {
+			scale: 1.7;
+			transform: translate(-50%, 0%);
+		}
+
+		&__textStart {
+			font-weight: 600;
+			font-size: 3.8rem;
+			margin-bottom: 1em;
+		}
+		&__p {
+			font-weight: normal;
+			font-size: 2.8rem;
+		}
+	}
+}
